@@ -2,10 +2,11 @@ body {
   font-family: "Roboto", sans-serif;
   line-height: 20px;
   color: white;
+  background-color: black;
 }
 
 html {
-  background: black;
+  background-color: #121212;
 }
 
 .header-container {
@@ -208,35 +209,93 @@ html {
   text-decoration: none;
 }
 
+.mobile-nav {
+  padding: 54px 5% 0;
+  font-size: 28px;
+}
+
+.mobile-nav a {
+  text-decoration: none;
+  color: white;
+}
+
+.mobile-nav li {
+  margin-top: 20px;
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 100vw;
+  bottom: 0;
+  z-index: 1;
+  background: #1c1c1c;
+
+  transition: all ease .3s;
+}
+
+.contacts, .about, .skills, .code-example, .education, .language, .project {
+  opacity: 0;
+}
+
+.element-show {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
 @media (max-width:670px) {
   .nav-class {
     display: none;
   }
 
   .nav-icon {
-    /* width: 81px;
-    text-align: center; */
     display: flex;
     justify-content: end;
     color: #fff;
     text-decoration: none;
     font-size: 20px;
+    position: relative;
+    z-index: 2;
   }
 }
 
 @media (max-width:538px) {
   .info {
-    /* flex-wrap: wrap; */
     display: block;
-    align-items: center;
+    text-align: center;
   }
 
-  .contacts {
+  .info li {
+    justify-content: center;
+  }
+
+  .contacts, .about, .skills, .code-example, .education, .language {
     width: 100%;
   }
 
-  .about {
+  .skills li {
+    margin-left: 0;
+  }
+
+  .code-view {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+  }
+
+  .skills-info {
+    display: flex;
+    justify-content: center;
+  }
+
+  .about, .code-example, .language {
     margin-top: 40px;
+  }
+
+  .contacts-title {
+    align-content: center;
   }
 }
 
